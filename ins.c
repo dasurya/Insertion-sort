@@ -1,8 +1,8 @@
 #include<stdio.h>
 
-int main()
+int sort(int *arr)
 {
-int arr[7]={4,23,43,38,15,10,30};
+
  int i, key, j;
    for (i = 1; i < 7; i++)
    {
@@ -19,8 +19,15 @@ int arr[7]={4,23,43,38,15,10,30};
        }
        arr[j+1] = key;
    }
+}
+int main()
+{
+  int i;
+int arr[7]={4,23,43,38,15,10,30};
+ sort(arr);
 printf("SORTED ARRAY:");
-for(i=1;i<7;i++)
+for(i=0;i<7;i++)
   printf(" %d",arr[i]);
  printf("\n");
+
 }
