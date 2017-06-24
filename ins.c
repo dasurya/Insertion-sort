@@ -1,10 +1,20 @@
 #include<stdio.h>
-
+int n;
+void read(int *arr)
+{
+ 
+  int i;
+  printf ("Enter the no. of elements:");
+  scanf("%d",&n);
+  printf("Enter the elements:");
+  for(i=0;i<n;i++)
+    scanf("%d",&arr[i]);
+}
 int sort(int *arr)
 {
 
  int i, key, j;
-   for (i = 1; i < 7; i++)
+   for (i = 1; i < n; i++)
    {
        key = arr[i];
        j = i-1;
@@ -22,11 +32,12 @@ int sort(int *arr)
 }
 int main()
 {
+  int arr[50];
   int i;
-int arr[7]={4,23,43,38,15,10,30};
+  read(arr);
  sort(arr);
 printf("SORTED ARRAY:");
-for(i=0;i<7;i++)
+for(i=0;i<n;i++)
   printf(" %d",arr[i]);
  printf("\n");
 
